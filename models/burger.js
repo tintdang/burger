@@ -1,4 +1,7 @@
 var orm = require("../config/orm.js")
 
+var burger = {
+    
+}
 
-module.exports
+module.exports = burger;
