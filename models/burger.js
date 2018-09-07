@@ -7,13 +7,14 @@ var burger = {
         })
     },
     create: function(col, val, cb){
-        console.log(col, val)
         orm.insertOne("burgers", col, val, function(res) {
             cb(res);
         });
     },
-    update: function(){
-        
+    update: function(condition, cb) {
+        orm.updateOne("burgers", condition, function(res) {
+            cb(res);
+        })
     }
 }
 

@@ -20,8 +20,8 @@ var orm = {
         })
     },
     //UPDATE burgers SET (devoured = true) WHERE id = ?
-    updateOne: function(table, obj, condition, cb){
-        var queryString = `UPDATE ${table} SET ${(obj)} WHERE ${condition}`
+    updateOne: function(table, condition, cb){
+        var queryString = `UPDATE ${table} SET devoured=true WHERE ${condition}`
         console.log(queryString)
         connection.query(queryString, function(err, result){
             if (err) throw err;
