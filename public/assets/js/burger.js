@@ -19,15 +19,16 @@ $(function() {
         );
     });
 
-    $(".create-form").on("click", function(event){
+    $(".create-form").on("submit", function(event){
         event.preventDefault();
 
         var newBurger = {
-            name: $("#burgs").val().trim()
+            burger_name: $("#burgs").val().trim()
         }
+        console.log(newBurger)
 
         //send the data over
-        $.ajax("/api/burger", {
+        $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger
         }).then(
