@@ -12,8 +12,13 @@ li {
     padding: 5px;
     margin: 5px;
     background: salmon;
+    overflow: auto;
 }
 #order {
     margin-left: auto;
     margin-right: auto;
+}
+
+button {
+
 }
